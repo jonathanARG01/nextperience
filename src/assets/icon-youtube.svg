@@ -1,0 +1,9 @@
+<svg id="Icon_ionic-logo-youtube" data-name="Icon ionic-logo-youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.474" height="12.358" viewBox="0 0 16.474 12.358">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4dc6d7"/>
+      <stop offset="1" stop-color="#4da0d7"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_ionic-logo-youtube-2" data-name="Icon ionic-logo-youtube" d="M16.367,7.229a2.5,2.5,0,0,0-2.381-2.613C12.2,4.532,10.384,4.5,8.527,4.5H7.948c-1.854,0-3.675.032-5.458.116A2.507,2.507,0,0,0,.112,7.235C.032,8.381,0,9.527,0,10.672s.032,2.291.109,3.44a2.51,2.51,0,0,0,2.378,2.623c1.873.087,3.794.126,5.747.122s3.871-.032,5.747-.122a2.51,2.51,0,0,0,2.381-2.623c.077-1.149.113-2.294.109-3.443S16.444,8.378,16.367,7.229Zm-9.706,6.6V7.506l4.666,3.16Z" transform="translate(0 -4.5)" fill="url(#linear-gradient)"/>
+</svg>
