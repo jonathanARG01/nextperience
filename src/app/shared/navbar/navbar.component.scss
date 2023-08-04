@@ -1,0 +1,123 @@
+.navbar {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F2F2F2;
+    z-index: 10;
+    .navbar-brand {
+        .logo {
+            max-width: 300px;
+            transition-duration: .3s;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .navbar-toggler {
+        span {
+
+        }
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+        ul {
+            margin-right: 20px;
+            li {
+                margin-right: 10px;
+                a {
+                    color: #373434;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition-duration: .3s;
+                    &:hover {
+                        color: #4DC6D7;
+                    }
+                }
+            }
+        }
+        .btn-contact {    
+            background-color: #373434;  
+            width: 100%;
+            max-width: 260px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-duration: .3s;
+            img {
+                margin-right: 10px;
+            }
+            &:hover {
+                background-color: #4DC6D7;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        .navbar-brand {
+            .logo {
+                max-width: 220px;
+            }
+        }
+        .navbar-collapse {
+            ul {
+                li {
+                    a {
+                        padding: 0px;
+                    }
+                }
+            }
+            .btn-contact {
+                max-width: 200px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .navbar {
+        .container {
+            max-width: 100% !important;
+            background-color: #fff;
+        }
+        .navbar-brand {
+            .logo {
+                max-width: 160px;
+            }
+        }
+        .navbar-collapse {
+            ul {
+                margin: 0;
+                margin-top: 40px;
+                li {
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 576px) {
+    
+}
