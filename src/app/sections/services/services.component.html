@@ -1,27 +1,51 @@
 <section>
 
-    <swiper-container
-        #swiper
-        slides-per-view="3"
-        grid-rows="1"
-        mousewheel-force-to-axis="true">
-
-        <swiper-slide>
-            <div class="box-img">
-                <img class="logo" src="./assets/logo.svg" alt="logo">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <div class="box-title">
+                <p>¿Qué ofrecemos?</p>
+                <img class="sign sign1" src="./assets/sign1.svg" alt="sign">
+                <img class="sign sign2" src="./assets/sign2.svg" alt="sign">
             </div>
-            <h6>Strategic Research</h6>
-        </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
+        </div>
+    </div>
 
-    </swiper-container>
+    <div class="row">
+
+        <div class="col-md-2 text-center d-none d-md-block">
+            <img class="vertical" src="./assets/img-vertical-nxtp.svg" alt="img-vertical-nxtp">
+        </div>
+
+        <div class="col-md-10">
+
+            <swiper-container
+                #swiper
+                slides-per-view="3"
+                mousewheel-force-to-axis="true"
+                [spaceBetween]="20">
+        
+                <swiper-slide *ngFor="let service of services">
+                    <div class="box-img">
+                        <img [src]="service.img" [alt]="service.name">
+                    </div>
+                    <h6>{{ service.name }}</h6>
+                    <p>{{ service.description }}</p>
+                    <ul>
+                        <li *ngFor="let characteristic of service.characteristics">
+                            <span>{{ characteristic }}</span>
+                        </li>
+                    </ul>
+                </swiper-slide>
+
+                <!-- Controles de navegación -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+        
+            </swiper-container>
+
+        </div>
+    
+    </div>
 
 </section>
 

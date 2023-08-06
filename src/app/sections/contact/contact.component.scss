@@ -4,6 +4,7 @@ section {
     background: rgb(77,163,215);
     background: radial-gradient(circle, rgba(77,163,215,1) 0%, rgba(77,198,215,1) 50%);   
     overflow: hidden;
+    transition-duration: .3s;
     .box-title {
         display: flex;
         justify-content: center;
@@ -54,18 +55,37 @@ section {
     }
     .sign {
         position: absolute;
+        transition-duration: .3s;
     }
     .sign.sign1 {
-        top: -40px;
+        top: -30px;
         left: 20px;
+        max-width: 300px;
     }
     .sign.sign2 {
-        left: 0;
-        bottom: -74px;
+        top: -40px;
+        right: 40px;
+        max-width: 300px;
     }
     .sign.sign3 {
         right: 0;
-        bottom: -20px;
+        bottom: -70px;
+        max-width: 300px;
+        filter: invert(1);
+    }
+    &:hover {
+        .sign.sign1 {
+            top: -10px;
+            left: 10px;
+        }
+        .sign.sign2 {
+            top: -10px;
+            right: 10px;
+        }
+        .sign.sign3 {
+            right: 10px;
+            bottom: -50px;
+        }
     }
 }
 

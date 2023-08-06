@@ -19,7 +19,7 @@ section {
         transition-duration: .3s;
         &:hover {
             filter: drop-shadow(2px 4px 6px black);
-            transform: scale(1.1) rotate(360deg);
+            transform: scale(1.1) rotate(180deg);
         }
     }
     .asterisk.asterisk1 {
