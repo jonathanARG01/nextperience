@@ -1,4 +1,62 @@
 <section class="container">
+
+
+    <h6>
+        <img class="seal" src="assets/seal.svg" alt="seal">
+        <span>Nuestros Proyectos</span>
+        <img class="sign sign3" src="assets/sign3.svg" alt="sign">
+        <img class="sign sign4" src="assets/sign4.svg" alt="sign">
+    </h6>
+
+
+    <div class="row mb-5">
+
+        <div class="col-md-12">
+
+            <swiper-container
+                #swiper
+                slides-per-view="3"
+                mousewheel-force-to-axis="true"
+                [spaceBetween]="40"
+                loop="false"
+                navigation="true"
+                pagination="true"
+                loop="true">
+        
+                <swiper-slide *ngFor="let project of projects">
+                    <div class="box-img">
+                        <img class="img" [src]="project.img" [alt]="project.name">
+                        <div class="play">
+                            <img src="./assets/icon-play.svg" alt="play">
+                        </div>
+                    </div>
+                    <h6>{{ project.name }} | {{ project.client }}</h6>
+                    <span *ngFor="let category of project.categories">{{ category }}</span>
+                    <p>{{ project.description }}</p>
+                </swiper-slide>
+        
+            </swiper-container>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- <div class="atropos my-atropos">
+        <div class="atropos-scale">
+            <div class="atropos-rotate">
+                <div class="atropos-inner">
+                    <div class="custom">
+                        <h2 data-atropos-offset="-10">Holaaaaaa</h2>
+                        <p data-atropos-offset="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quisquam amet quas omnis laboriosam placeat modi voluptate! Voluptatem dolorum quia doloribus quo molestiae iste consequuntur impedit, corporis culpa dolorem soluta officiis nemo a cum quaerat minus. Voluptatum cum laboriosam officia sunt ipsa corrupti libero saepe provident. Voluptatum adipisci eum laudantium.</p>
+                        <button data-atropos-offset="10" class="btn btn-primary mt-5">Click</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     
     <div class="row">
         <div class="col-12">

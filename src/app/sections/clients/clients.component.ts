@@ -1,5 +1,8 @@
-import { Component    } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// import Atropos library
+import Atropos from 'atropos';
 
 
 
@@ -13,7 +16,7 @@ import { CommonModule } from '@angular/common';
 
 
 
-export class ClientsComponent {
+export class ClientsComponent implements OnInit {
 
 
 	clients: any = [
@@ -66,6 +69,29 @@ export class ClientsComponent {
 			img: './assets/customer-logo-12.svg'
 		}
 	];
+
+
+	ngOnInit(): void {
+	
+		// Initialize
+		const myAtropos = Atropos({
+			
+			el: '.my-atropos',
+			activeOffset: 40,
+			shadowScale: 1.05,
+			onEnter() {
+				console.log('Enter');
+			},
+			onLeave() {
+				console.log('Leave');
+			},
+			onRotate(x, y) {
+				console.log('Rotate', x, y);
+			}
+
+		});
+
+	}
 
 	
 }
