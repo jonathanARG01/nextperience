@@ -1,16 +1,24 @@
+// Angular
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule      } from '@angular/common';
+import { RouterModule      } from '@angular/router';
+
+// Swiper
 import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
-import { register } from 'swiper/element/bundle';
+import { register      } from 'swiper/element/bundle';
+
+// Services
+import { ProjectsService } from 'src/app/services/projects.service';
 
 register();
+
 
 
 @Component({
   	selector:    'app-projects',
   	standalone:  true,
-  	imports:     [CommonModule],
+  	imports:     [CommonModule, RouterModule],
   	templateUrl: './projects.component.html',
   	styleUrls:   ['./projects.component.scss']
 })
@@ -20,49 +28,18 @@ register();
 export class ProjectsComponent implements OnInit {
 
 
-	projects: any = [
-		{
-			img: './assets/project1.png',
-			name: 'Landing Philips S300',
-			client: 'Philips',
-			categories: ['Categoria 1', 'Categoria 2', 'Categoria 3', 'Categoria 4'],
-			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-		},
-		{
-			img: './assets/project2.png',
-			name: 'Sitio',
-			client: 'Veranda',
-			categories: ['Categoria 1', 'Categoria 2'],
-			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-		},
-		{
-			img: './assets/project3.png',
-			name: 'Sitio',
-			client: 'Extreme Zone',
-			categories: ['Categoria 1', 'Categoria 2', 'Categoria 3'],
-			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-		},
-		{
-			img: './assets/project4.png',
-			name: 'Experiencia Automotríz',
-			client: 'Melhuish',
-			categories: ['Categoria 1', 'Categoria 2', 'Categoria 3'],
-			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-		},
-		{
-			img: './assets/project5.png',
-			name: 'Serie 8000',
-			client: 'Philips',
-			categories: ['Categoria 1'],
-			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-		}
-	];
+	projects: any = [];
+
+
+	constructor( private projectsService: ProjectsService ) {}
 
 
 	ngOnInit(): void {
 
+		this.getProjects();
+
 		const swiperParams: SwiperOptions = {
-			speed: 500,
+			speed: 1000,
   			spaceBetween: 20,
 			autoplay: true,
 			centeredSlides: true,
@@ -91,6 +68,11 @@ export class ProjectsComponent implements OnInit {
 
 		swiper;
 
+	}
+
+
+	getProjects(): void {
+		this.projects = this.projectsService.getProjects();
 	}
 
 

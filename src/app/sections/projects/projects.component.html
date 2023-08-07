@@ -26,7 +26,7 @@
                         <span class="category" *ngFor="let category of project.categories">{{ category }}</span>
                         <p>
                             {{ project.description }}
-                            <a class="more">
+                            <a class="more" routerLink="/project/{{ project.id }}">
                                 <span>Ver más</span>
                                 <img class="logo" src="./assets/icon-arrow-right-box.svg" alt="arrow-right">
                             </a>
