@@ -1,7 +1,5 @@
 section {
-
     position: relative;
-
     .box-title {
         display: flex;
         justify-content: center;
@@ -34,14 +32,11 @@ section {
             top: -30px;
         }
     }
-
     .vertical {
-
         &:hover {
             animation: shake-left-right 0.8s linear both;
         }
     }
-
     .swiper1 {
         padding-bottom: 100px;
         .swiper-slide {
@@ -86,9 +81,7 @@ section {
                 }
             }
         }
-
     }
-
     .box-controls {
         position: absolute;
         bottom: -10px;
@@ -114,58 +107,6 @@ section {
             }
         }
     }
-
-    // .swiper-pagination {
-    //     background-color: red;
-    //     .swiper-pagination-bullet {
-    //         border: 2px solid #000;
-    //         width: 14px;
-    //         height: 14px;
-    //         opacity: 1;
-    //         background-color: #fff;
-    //     }
-    // }
-
-}
-
-
-
-.shake-left-right {
-    animation: shake-left-right 0.8s linear both;
-}
-  
-@keyframes shake-left-right {
-    0%, 100% {
-        transform: rotate(0deg);
-        transform-origin: 50% 50%;
-    }
-    10% {
-        transform: rotate(8deg);
-    }
-    20%, 40%, 60% {
-        transform: rotate(-10deg);
-    }
-    30%, 50%, 70% {
-        transform: rotate(10deg);
-    }
-    80% {
-        transform: rotate(-8deg);
-    }
-    90% {
-        transform: rotate(8deg);
-    }
-}
-  
-
-
-
-
-@media (max-width: 1400px) {
-
-}
-
-@media (max-width: 1200px) {
-
 }
 
 @media (max-width: 992px) {
@@ -184,12 +125,4 @@ section {
         }
     }
 
-}
-
-@media (max-width: 768px) {
-    
-}
-
-@media (max-width: 576px) {
-    
 }
