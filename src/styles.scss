@@ -40,3 +40,12 @@ body::-webkit-scrollbar-track:hover,
 body::-webkit-scrollbar-track:active {
     background: #ccc;
 }
+
+
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: inherit;
+}
+

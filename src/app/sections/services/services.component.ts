@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import Swiper from 'swiper';
+import { SwiperOptions } from 'swiper/types';
+import { register } from 'swiper/element/bundle';
 
-
+register();
 
 
 
@@ -12,13 +13,12 @@ import Swiper from 'swiper';
   	standalone:  true,
   	imports:     [CommonModule],
   	templateUrl: './services.component.html',
-  	styleUrls:   ['./services.component.scss'],
-	schemas:     [ CUSTOM_ELEMENTS_SCHEMA ]
+  	styleUrls:   ['./services.component.scss']
 })
 
 
 
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
 
 
 	services: any = [
@@ -42,5 +42,40 @@ export class ServicesComponent {
 		}
 	];
 
+	slider: any;
+
+	ngOnInit(): void {
+
+		const swiperParams: SwiperOptions = {
+			speed: 500,
+  			spaceBetween: 20,
+			autoplay: true,
+			loop: true,
+			centeredSlides: true,
+			navigation: {
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+			breakpoints: {
+				0: {
+				  	slidesPerView: 1,
+				  	spaceBetween: 20
+				},
+				1100: {
+				  	slidesPerView: 3,
+				  	spaceBetween: 40
+				}
+			}
+		};
+		  
+		const swiper = new Swiper('.swiper1', swiperParams);
+
+		swiper;
+
+	}
 
 }

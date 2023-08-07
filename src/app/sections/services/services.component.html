@@ -18,33 +18,49 @@
 
         <div class="col-md-10">
 
-            <swiper-container
-                #swiper
-                slides-per-view="3"
-                mousewheel-force-to-axis="true"
-                [spaceBetween]="20">
-        
-                <swiper-slide *ngFor="let service of services">
-                    <div class="box-img">
-                        <img [src]="service.img" [alt]="service.name">
+            <div class="swiper swiper1">
+                
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let service of services">
+                        <div class="box-img">
+                            <img [src]="service.img" [alt]="service.name">
+                        </div>
+                        <h6>{{ service.name }}</h6>
+                        <p>{{ service.description }}</p>
+                        <ul>
+                            <li *ngFor="let characteristic of service.characteristics">
+                                <span>{{ characteristic }}</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h6>{{ service.name }}</h6>
-                    <p>{{ service.description }}</p>
-                    <ul>
-                        <li *ngFor="let characteristic of service.characteristics">
-                            <span>{{ characteristic }}</span>
-                        </li>
-                    </ul>
-                </swiper-slide>
+                    <div class="swiper-slide" *ngFor="let service of services">
+                        <div class="box-img">
+                            <img [src]="service.img" [alt]="service.name">
+                        </div>
+                        <h6>{{ service.name }}</h6>
+                        <p>{{ service.description }}</p>
+                        <ul>
+                            <li *ngFor="let characteristic of service.characteristics">
+                                <span>{{ characteristic }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                <!-- Controles de navegación -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
-        
-            </swiper-container>
+            </div>
 
         </div>
     
+    </div>
+
+    <div class="box-controls">
+        <div class="swiper-button swiper-button-prev">
+            <img src="assets/icon-arrow-slider-left-hover.svg" alt="arrow-slider-left">
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button swiper-button-next">
+            <img src="assets/icon-arrow-slider-right-hover.svg" alt="arrow-slider-right">
+        </div>
     </div>
 
 </section>

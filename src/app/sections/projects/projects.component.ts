@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import Swiper from 'swiper';
+import { SwiperOptions } from 'swiper/types';
+import { register } from 'swiper/element/bundle';
 
-// import Atropos library
-import Atropos from 'atropos';
+register();
 
 
 @Component({
@@ -12,8 +12,7 @@ import Atropos from 'atropos';
   	standalone:  true,
   	imports:     [CommonModule],
   	templateUrl: './projects.component.html',
-  	styleUrls:   ['./projects.component.scss'],
-	schemas:     [ CUSTOM_ELEMENTS_SCHEMA ]
+  	styleUrls:   ['./projects.component.scss']
 })
 
 
@@ -61,28 +60,38 @@ export class ProjectsComponent implements OnInit {
 
 
 	ngOnInit(): void {
-	
-		// Initialize
-		const myAtropos = Atropos({
-			
-			el: '.my-atropos',
-			activeOffset: 40,
-			shadowScale: 1.05,
-			// onEnter() {
-			// 	console.log('Enter');
-			// },
-			// onLeave() {
-			// 	console.log('Leave');
-			// },
-			// onRotate(x, y) {
-			// 	console.log('Rotate', x, y);
-			// }
 
-		});
+		const swiperParams: SwiperOptions = {
+			speed: 500,
+  			spaceBetween: 20,
+			autoplay: true,
+			centeredSlides: true,
+			direction: 'horizontal',
+			navigation: {
+				prevEl: '.swiper-button-prev-swiper2',
+				nextEl: '.swiper-button-next-swiper2'
+			},
+			breakpoints: {
+				0: {
+				  	slidesPerView: 1,
+				  	spaceBetween: 20
+				},
+				768: {
+				  	slidesPerView: 2,
+				  	spaceBetween: 30
+				},
+				1200: {
+				  	slidesPerView: 3,
+				  	spaceBetween: 40
+				}
+			}
+		};
+		  
+		const swiper = new Swiper('.swiper2', swiperParams);
+
+		swiper;
 
 	}
-
-
 
 
 }
