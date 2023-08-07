@@ -1,14 +1,19 @@
-import { Component, OnInit      } from '@angular/core';
-import { CommonModule   } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+// Angular
+import { Component, OnInit } from '@angular/core';
+import { CommonModule      } from '@angular/common';
+import { ActivatedRoute    } from '@angular/router';
 
-
+// Components
 import { NavbarComponent     } from 'src/app/shared/navbar/navbar.component';
 import { StatisticsComponent } from 'src/app/sections/statistics/statistics.component';
 import { ProjectsComponent   } from 'src/app/sections/projects/projects.component';
 import { ContactComponent    } from 'src/app/sections/contact/contact.component';
 import { FooterComponent     } from 'src/app/sections/footer/footer.component';
+
+// Services
 import { ProjectsService } from 'src/app/services/projects.service';
+
+// Interfaces
 import { Project } from 'src/app/interfaces/project.interface';
 
 
@@ -47,7 +52,7 @@ export class SingleProjectComponent implements OnInit {
 	
 		this.activatedRoute.params.subscribe(params => {
 	
-			const id = +params['id']; // Asegúrate de convertirlo a número
+			const id = +params['id'];
 	  
 			this.projectsService.getProjectById(id).subscribe((project: Project | undefined) => {
 				
