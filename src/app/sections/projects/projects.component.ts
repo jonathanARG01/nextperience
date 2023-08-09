@@ -41,7 +41,7 @@ export class ProjectsComponent implements OnInit {
 		const swiperParams: SwiperOptions = {
 			speed: 1000,
   			spaceBetween: 20,
-			autoplay: true,
+			// autoplay: true,
 			centeredSlides: true,
 			direction: 'horizontal',
 			navigation: {

@@ -1,0 +1,24 @@
+<section>
+
+    <div class="container">
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-5">
+                <div class="box-screen" style="background-image: url('assets/project1-screen1.png');"></div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="box-screen" style="background-image: url('assets/project1-screen2.png');"></div>
+            </div>
+        </div>
+
+        <div class="row pt-5">
+            
+            <div class="col-md-4 mb-5 text-center" *ngFor="let image of project.screens_mobile">
+                <img class="screen" [src]="'assets/' + image" alt="screen">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

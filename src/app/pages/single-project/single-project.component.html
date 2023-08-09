@@ -1,8 +1,6 @@
-<div>
-
+<div [@pageTransition] class="page-transition">
     
     <app-navbar></app-navbar>
-
 
     <ng-template #loading>
         <div class="loading">
@@ -12,26 +10,14 @@
         </div>
     </ng-template>
 
-
     <div *ngIf="project; else loading" class="single">
-        
-        <section>
-    
-            <div class="head container">
-                <h2> {{ project.name }} </h2>
-            </div>
-            <div class="banner">
-                <img [src]="project.banner" [alt]="project.name">
-            </div>
-    
-        </section>
-
+        <app-banner-single [project]="project" />
+        <app-description-single [project]="project" />
+        <app-screens-single [project]="project" />
         <app-statistics/>
-        
+        <app-other-projects-single />
         <app-contact />
         <app-footer />
-
     </div>
-
 
 </div>

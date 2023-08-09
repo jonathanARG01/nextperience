@@ -1,0 +1,44 @@
+<section class="container">
+
+    <h6>
+        <img class="seal" src="assets/seal.svg" alt="seal">
+        <span>Otros Proyectos</span>
+        <img class="sign sign3" src="assets/sign3.svg" alt="sign">
+        <img class="sign sign4" src="assets/sign4.svg" alt="sign">
+    </h6>
+
+    <div class="row mb-5">
+
+        <div class="col-md-12">
+
+            <div class="swiper swiper2">
+                
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" *ngFor="let project of projects">
+                        <div class="box-img">
+                            <img class="img" [src]="project.img2" [alt]="project.name2">
+                        </div>
+                        <h6>{{ project.client }}</h6>
+                        <span class="category" *ngFor="let category of project.categories">{{ category }}</span>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    </div>
+
+                </div>
+            
+                <div class="swiper-button swiper-button-prev swiper-button-prev-swiper2">
+                    <img src="assets/icon-arrow-slider-left-hover.svg" alt="arrow-slider-left">
+                </div>
+                <div class="swiper-button swiper-button-next swiper-button-next-swiper2">
+                    <img src="assets/icon-arrow-slider-right-hover.svg" alt="arrow-slider-right">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

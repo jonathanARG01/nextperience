@@ -18,19 +18,19 @@
                     <div class="swiper-slide" *ngFor="let project of projects">
                         <div class="box-img">
                             <img class="img" [src]="project.img" [alt]="project.name">
-                            <div class="play">
+                            <!-- <div class="play">
                                 <img src="./assets/icon-play.svg" alt="play">
-                            </div>
+                            </div> -->
                         </div>
-                        <h6>{{ project.name }} | {{ project.client }}</h6>
-                        <span class="category" *ngFor="let category of project.categories">{{ category }}</span>
+                        <h6>{{ project.client }}</h6>
+                        <!-- <span class="category" *ngFor="let category of project.categories">{{ category }}</span>
                         <p>
                             {{ project.description }}
                             <a class="more" routerLink="/project/{{ project.id }}">
                                 <span>Ver más</span>
                                 <img class="logo" src="./assets/icon-arrow-right-box.svg" alt="arrow-right">
                             </a>
-                        </p>
+                        </p> -->
                     </div>
 
                 </div>
@@ -48,7 +48,7 @@
 
     </div>
 
-    <div class="row border-top">
+    <!-- <div class="row border-top">
         <div class="col-12">
             <div class="box-title">
                 <div class="d-flex box">
@@ -62,6 +62,6 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </section>

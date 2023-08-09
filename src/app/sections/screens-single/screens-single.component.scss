@@ -1,0 +1,25 @@
+section {
+    padding: 100px 0;
+    .box-screen {
+        height: 600px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        transition-duration: 5s;
+        cursor: pointer;
+        filter: drop-shadow(2px 4px 6px black);
+        border-radius: 10px;
+        &:hover {
+            background-position: bottom;
+        }
+    }
+    .screen {
+        max-width: 300px;
+        height: auto;
+        filter: drop-shadow(2px 4px 6px black);
+        :hover {
+            transform: scale(1.1);
+        }
+    }
+}
