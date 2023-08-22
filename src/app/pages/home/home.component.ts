@@ -37,14 +37,14 @@ import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
 	],
   	templateUrl: './home.component.html',
   	styleUrls: ['./home.component.scss'],
-	  animations: [
+	animations: [
 		trigger('pageTransition', [
 			transition(':enter, :leave', [
 				style({ opacity: 0 }),
 				animate('0.5s ease-in-out', style({ opacity: 1 })),
 			]),
 		])
-	],
+	]
 })
 
 
