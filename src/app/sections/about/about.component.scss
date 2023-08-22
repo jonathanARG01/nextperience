@@ -21,7 +21,6 @@ section {
                     .asterik {
                         width: 70px;
                         margin-right: 20px;
-                        transition-duration: .3s;
                     }
                     .sign {
                         position: absolute;
@@ -29,7 +28,6 @@ section {
                         bottom: 0;
                         left: 50%;
                         z-index: -1;
-                        transition-duration: .3s;
                     }
                 }
                 p {
@@ -41,14 +39,6 @@ section {
                         font-weight: 800;
                     }
                 }
-                &:hover {
-                    .asterik {
-                        transform: rotate(180deg);
-                    }
-                    .sign {
-                        bottom: -10px !important;
-                    }
-                }
             }
         }
     }
@@ -57,11 +47,6 @@ section {
         position: absolute;
         top: 0;
         right: -300px;
-        transition-duration: .3s;
-        &:hover {
-            filter: drop-shadow(2px 4px 6px black);
-            transform: rotate(180deg);
-        }
     }
     .box-controls {
         position: absolute;

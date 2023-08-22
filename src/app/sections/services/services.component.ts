@@ -42,7 +42,7 @@ export class ServicesComponent implements OnInit {
 		}
 	];
 
-	slider: any;
+	slider: Swiper | undefined;
 
 	ngOnInit(): void {
 
@@ -58,7 +58,8 @@ export class ServicesComponent implements OnInit {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				clickable: true,
+				type: 'bullets'
 			},
 			breakpoints: {
 				0: {
@@ -71,10 +72,8 @@ export class ServicesComponent implements OnInit {
 				}
 			}
 		};
-		  
-		const swiper = new Swiper('.swiper1', swiperParams);
 
-		swiper;
+		this.slider = new Swiper('.swiper1', swiperParams);
 
 	}
 

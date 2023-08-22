@@ -21,52 +21,96 @@ export class ClientsComponent implements OnInit {
 
 	clients: any = [
 		{
-			name: 'Aventura Motors',
+			name: 'Pura Artisans',
 			img: './assets/customer-logo-1.svg'
 		},
 		{
-			name: 'Marley Coffee',
+			name: 'Biar Consultores',
 			img: './assets/customer-logo-2.svg'
 		},
 		{
-			name: 'Biar Consultores',
+			name: 'Genomma Lab',
 			img: './assets/customer-logo-3.svg'
 		},
 		{
-			name: 'Extreme Zone',
+			name: 'Gudbalance',
 			img: './assets/customer-logo-4.svg'
 		},
 		{
-			name: 'Claro',
+			name: 'Philips',
 			img: './assets/customer-logo-5.svg'
 		},
 		{
-			name: 'Genomma Lab',
+			name: 'Claro',
 			img: './assets/customer-logo-6.svg'
 		},
 		{
-			name: 'Viu Clinic',
+			name: 'VyV',
 			img: './assets/customer-logo-7.svg'
 		},
 		{
-			name: 'Wisetrack',
+			name: 'Caminos del Inca',
 			img: './assets/customer-logo-8.svg'
 		},
 		{
-			name: 'Philips',
+			name: 'Aventura Motors',
 			img: './assets/customer-logo-9.svg'
 		},
 		{
-			name: 'Melhuish',
+			name: 'Author',
 			img: './assets/customer-logo-10.svg'
 		},
 		{
-			name: 'Wisecity',
+			name: 'Excell',
 			img: './assets/customer-logo-11.svg'
 		},
 		{
-			name: 'Veranda',
+			name: 'Abcdin',
 			img: './assets/customer-logo-12.svg'
+		},
+		{
+			name: 'Melhuish',
+			img: './assets/customer-logo-13.svg'
+		},
+		{
+			name: 'ViuClinic',
+			img: './assets/customer-logo-14.svg'
+		},
+		{
+			name: 'Clinica Alemana',
+			img: './assets/customer-logo-15.svg'
+		},
+		{
+			name: 'Difor',
+			img: './assets/customer-logo-16.svg'
+		},
+		{
+			name: 'Electrolux',
+			img: './assets/customer-logo-17.svg'
+		},
+		{
+			name: 'Epson',
+			img: './assets/customer-logo-18.svg'
+		},
+		{
+			name: 'Marley Coffee',
+			img: './assets/customer-logo-19.svg'
+		},
+		{
+			name: 'Extreme Zone',
+			img: './assets/customer-logo-20.svg'
+		},
+		{
+			name: 'Wisetrack',
+			img: './assets/customer-logo-21.svg'
+		},
+		{
+			name: 'Wisecity',
+			img: './assets/customer-logo-22.svg'
+		},
+		{
+			name: 'Veranda',
+			img: './assets/customer-logo-23.svg'
 		}
 	];
 

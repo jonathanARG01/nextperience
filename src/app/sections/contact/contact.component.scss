@@ -13,16 +13,16 @@ section {
             height: 100px;
         }
         p {
-            font-size: 60px;
-            font-weight: 600;
-            line-height: 50px;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 70px;
             margin: 0;
             margin-left: 20px;
         }
     }
     h4 {
         color: #fff;
-        font-size: 30px;
+        font-size: 40px;
         text-align: center;
         font-weight: 400;
     }
@@ -55,7 +55,6 @@ section {
     }
     .sign {
         position: absolute;
-        transition-duration: .3s;
     }
     .sign.sign1 {
         top: -30px;
@@ -71,21 +70,6 @@ section {
         right: 0;
         bottom: -70px;
         max-width: 300px;
-        filter: invert(1);
-    }
-    &:hover {
-        .sign.sign1 {
-            top: -10px;
-            left: 10px;
-        }
-        .sign.sign2 {
-            top: -10px;
-            right: 10px;
-        }
-        .sign.sign3 {
-            right: 10px;
-            bottom: -50px;
-        }
     }
 }
 

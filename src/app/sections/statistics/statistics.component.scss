@@ -1,20 +1,19 @@
 section {
-    padding: 200px 100px;
+    padding: 300px 200px;
     position: relative;
     background: rgb(77,163,215);
     background: radial-gradient(circle, rgba(77,163,215,1) 0%, rgba(77,198,215,1) 50%);   
     overflow: hidden;
     .box-title {
         display: flex;
-        justify-content: center;
         align-items: center;
         .asterik {
             height: 100px;
         }
-        p {
-            font-size: 50px;
+        p {        
+            font-size: 70px;
             font-weight: 700;
-            line-height: 50px;
+            line-height: 70px;
             margin: 0;
             margin-left: 20px;
             text-transform: uppercase;
@@ -27,6 +26,8 @@ section {
             font-size: 100px;
             font-weight: 800;
             margin: 0;
+            display: flex;
+            align-items: baseline;
             span {
                 font-size: 80px;
             }
@@ -52,20 +53,6 @@ section {
     .sign.sign3 {
         right: 0;
         bottom: -20px;
-    }
-    &:hover {
-        .sign.sign1 {
-            top: -30px;
-            left: 10px;
-        }
-        .sign.sign2 {
-            left: 20;
-            bottom: -40px;
-        }
-        .sign.sign3 {
-            right: 20px;
-            bottom: -30px;
-        }
     }
 }
 
@@ -114,6 +101,7 @@ section {
         .box-statistics {
             h6 {        
                 font-size: 40px;
+                justify-content: center;
                 span {
                     font-size: 30px;
                 }

@@ -1,6 +1,6 @@
 section {
-    margin-top: 60px;
-    height: calc(100vh - 60px);
+    margin-top: 90px;
+    height: calc(100vh - 90px);
     position: relative;
     background: rgb(77,163,215);
     background: radial-gradient(circle, rgba(77,163,215,1) 0%, rgba(77,198,215,1) 50%); 
@@ -16,11 +16,6 @@ section {
     .asterisk {
         height: 200px;
         position: absolute;
-        transition-duration: .3s;
-        &:hover {
-            filter: drop-shadow(2px 4px 6px black);
-            transform: scale(1.1) rotate(180deg);
-        }
     }
     .asterisk.asterisk1 {
         bottom: -100px;
