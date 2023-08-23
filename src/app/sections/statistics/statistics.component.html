@@ -1,4 +1,4 @@
-<section>
+<section #statisticsSection>
     
     <div class="row">
         <div class="col-12">
@@ -11,22 +11,22 @@
 
     <div class="row justify-content-between align-items-center mt-5">
         <div class="col-12 col-md-3 mb-4">
-            <div class="box-statistics">
-                <h6>65 <span>mm</span></h6>
-                <p>Revenue de Clientes</p>
-            </div>
+          <div class="box-statistics" [@incrementAnimation]="revenue">
+            <h6>{{ revenue | number }} <span>mm</span></h6>
+            <p>Revenue de Clientes</p>
+          </div>
         </div>
         <div class="col-12 col-md-3 mb-4">
-            <div class="box-statistics">
-                <h6>8 <span>mm</span></h6>
-                <p>Personas alcanzadas</p>
-            </div>
+          <div class="box-statistics" [@incrementAnimation]="peopleReached">
+            <h6>{{ peopleReached | number }} <span>mm</span></h6>
+            <p>Personas alcanzadas</p>
+          </div>
         </div>
         <div class="col-12 col-md-3 mb-4">
-            <div class="box-statistics">
-                <h6>4 <span>%</span></h6>
-                <p>% de Conversión.</p>
-            </div>
+          <div class="box-statistics" [@incrementAnimation]="conversionRate">
+            <h6>{{ conversionRate | number: '1.1-1' }} <span>%</span></h6>
+            <p>% de Conversión.</p>
+          </div>
         </div>
     </div>
 
