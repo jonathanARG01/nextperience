@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
+import { SwiperOptions } from 'swiper/types';
 import { register } from 'swiper/element/bundle';
 
 register();
@@ -20,9 +21,11 @@ register();
 export class AboutComponent implements OnInit {
 
 	
+	slider: Swiper | undefined;
+
 	ngOnInit(): void {
 
-		new Swiper('.swiper3', {
+		const swiperParams: SwiperOptions = {
 			slidesPerView: 1,
 			speed: 500,
   			spaceBetween: 20,
@@ -30,17 +33,21 @@ export class AboutComponent implements OnInit {
 			autoplay: true,
 			centeredSlides: true,
 			direction: 'horizontal',
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-			},
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next'
+				prevEl: '.swiper-button-prev-about',
+				nextEl: '.swiper-button-next-about'
+			},
+			pagination: {
+				el: '.swiper-pagination-about',
+				clickable: true,
+				type: 'bullets',
 			}
-		});
+		};
 
+		this.slider = new Swiper('.swiper3', swiperParams);
+	
 	}
+
 
 
 }

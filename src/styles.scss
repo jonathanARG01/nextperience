@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+
 html,
 body {
     height: 100%;
@@ -258,3 +260,22 @@ body::-webkit-scrollbar-track:active {
         }
     }
 }
+
+
+
+
+
+.swiper-pagination .swiper-pagination-bullet,
+.swiper-pagination-about .swiper-pagination-bullet {
+    border: 2px solid #000;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.swiper-pagination-about .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000;
+}
+

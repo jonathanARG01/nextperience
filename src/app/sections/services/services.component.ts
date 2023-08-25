@@ -50,7 +50,7 @@ export class ServicesComponent implements OnInit {
 			speed: 500,
   			spaceBetween: 20,
 			autoplay: true,
-			loop: true,
+			loop: false,
 			centeredSlides: true,
 			navigation: {
 				prevEl: '.swiper-button-prev',
